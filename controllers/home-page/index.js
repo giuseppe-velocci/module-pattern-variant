@@ -1,9 +1,12 @@
-module.exports = function(app) {
-    const ui = require('../../ui-modules/home-page/module-interface');
+module.exports = {
+    priority: 10,
+    code: function(app) {
+        const ui = require('../../ui-modules/home-page/module-interface');
 
-    'use strict';
+        'use strict';
 
-    app.get('/', (req, res) => {
-        res.send(ui.displayHome());
-    });
+        app.get('/', (req, res) => {
+            res.send(ui.displayHome());
+        });
+    }
 };
