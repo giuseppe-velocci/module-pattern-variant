@@ -4,17 +4,17 @@ module.exports = function(app) {
 
     'use strict';
 
-    app.get('/', (req, res) => {
+    app.get('/mail', (req, res) => {
         res.send(mailUi.displayForm('./'));
     });
     
-    app.post('/', (req, res) => {
+    app.post('/mail', (req, res) => {
         mailServer.sendMail(req).then(
             (_) => {
-                res.send(mailUi.emailResultPage('Sent!', './'));
+                res.send(mailUi.emailResultPage('Sent!', './mail'));
             },
             (err) => {
-                res.send(mailUi.emailResultPage(err.message, './'));
+                res.send(mailUi.emailResultPage(err.message, './mail'));
             }
         );        
     });
