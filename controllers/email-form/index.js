@@ -1,6 +1,6 @@
 module.exports = function(app) {
-    const mailServer = require('../../modules/email-sender/module-listener');
-    const mailUi = require('../../ui-modules/email-form/module-listener');
+    const mailServer = require('../../modules/email-sender/module-interface');
+    const mailUi = require('../../ui-modules/email-form/module-interface');
 
     'use strict';
 

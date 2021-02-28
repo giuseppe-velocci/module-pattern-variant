@@ -1,8 +1,10 @@
 const express = require('express');
-const config = require('./config.json');
+const env = require('node-env-file');
+
+env(__dirname + '/.env');
 
 const app = express();
-const port = config.port;
+const port = process.env.MODULE_APP_PORT || 3000;
 
 // require all controllers and execute them
 var normalizedPath = require("path").join(__dirname, "controllers");
