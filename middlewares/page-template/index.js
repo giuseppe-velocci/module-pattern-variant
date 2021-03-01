@@ -6,10 +6,12 @@ module.exports = {
 
         'use strict';
 
-        const pathsToExclude = [];
+        const pathsToExclude = ['api/'];
 
         app.use(function (req, res, next) {
-            if (req.method != 'GET' || pathsToExclude.includes(req)) {
+            console.log(req.url);
+
+            if (pathsToExclude.filter(x => req.url.indexOf(x) >= 0).length > 0) {
                 return next();
             }
 

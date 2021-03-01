@@ -13,12 +13,12 @@ const methods = () => {
         }
     });
 
-    const sendMail = (to, subject, body) => {
+    const sendMail = (params) => {
         const mailOptions = {
             from: user,
-            to: to,
-            subject: subject,
-            text: body
+            to: params.to,
+            subject: params.subject,
+            text: params.body
         };
 
         return transporter.sendMail(mailOptions);

@@ -5,11 +5,7 @@ module.exports = {
         const module = require('./module');
 
         return {
-            sendMail: (req) => module.sendMail(
-                req.params.to,
-                req.params.subject,
-                req.params.body
-            )
+            sendMail: (req) => module.sendMail(req.params)
         }
     }()
 };
