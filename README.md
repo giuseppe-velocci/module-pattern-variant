@@ -7,9 +7,10 @@ Install [node](https://nodejs.org/en/download/). To test installation open a con
 ```node -v```
 
 It should return version installed. Also ```npm``` is needed (it will be shipped together with node).
+
 Copy the ```.env.example``` file in the /server folder and rename it as ```.env```.
 
-Open 2 console teminal windows, one pointing at ```/server``` folder, the other to ```/client``` folder inside this repository. In both terminal install modules with the command:
+Open 2 console teminal windows, one pointing at ```/server``` folder, the other at ```/client``` folder inside this repository. In both terminal install modules with the command:
 
 ```npm install```
 
@@ -23,4 +24,4 @@ then start client app from the other terminal with the command:
 
 Since this app uses [nodemon](https://www.npmjs.com/package/nodemon) each change to local file will automatically restart server.
 
-Then open your briwser at http://localhost:3200 to navigate it. The port can be different depending on the ```.env``` file parameters.
+Then open your browser at http://localhost:3200 to navigate it. The port can be different depending on the ```.env``` file parameters.
