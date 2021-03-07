@@ -1,5 +1,6 @@
 <script>
 	export let name;
+	console.log(fetch('/api/mail').then(x => {x}, y => {y} ));
 </script>
 
 <main>

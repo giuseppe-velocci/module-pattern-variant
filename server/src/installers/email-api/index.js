@@ -1,4 +1,6 @@
-module.exports = function(app) {
+const Installer = require("../../Installer");
+
+module.exports = new Installer(function(app) {
     const mailServer = require('../../modules/email-api/module-interface');
 
     'use strict';
@@ -15,4 +17,4 @@ module.exports = function(app) {
     app.get('/api/mail', (_, res) => {
         res.send('mail v0.1');
     });
-};
+});
